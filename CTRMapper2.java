@@ -16,8 +16,8 @@ public class CTRMapper extends Mapper<LongWritable, Text, Text, Text>  {
             String adCreativeId = columns[18]; // 19th column
             String width = columns[13]; // 14th column
             String height = columns[14]; // 15th column
-            String clicks = columns[22]; // 23rd column
-            String conversions = columns[23]; // 24th column
+            String clicks = columns[24]; // 23rd column
+            String conversions = columns[25]; // 24th column
 
             // Creating a composite value of width, height, clicks, and conversions
             String compositeValue = width + "\t" + height + "\t" + clicks + "\t" + conversions;
