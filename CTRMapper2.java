@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.naming.Context;
 
-public class CTRMapper extends Mapper<LongWritable, Text, Text, Text>  {
+public class CTRMapper2 extends Mapper<LongWritable, Text, Text, Text>  {
     @Override
     public void map(LongWritable key, Text value, Context context) 
     throws IOException, InterruptedException {
