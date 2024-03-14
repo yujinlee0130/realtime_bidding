@@ -2,7 +2,9 @@ import java.io.IOException;
 
 import javax.naming.Context;
 
-import org.w3c.dom.Text;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
 
 public class CTRReducer extends Reducer<Text, Text, Text, Text>{
 @Override 
