@@ -4,7 +4,7 @@ import javax.naming.Context;
 
 import org.w3c.dom.Text;
 
-public class CTRReducer {
+public class CTRReducer extends Reducer<Text, Text, Text, Text>{
 @Override 
     public void reduce(Text key, Iterable<Text> values, Context context) 
     throws IOException, InterruptedException {
