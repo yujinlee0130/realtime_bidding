@@ -17,7 +17,6 @@ public class CTRReducer extends Reducer<Text, Text, Text, Text>{
 
         for (Text val : values) {
             String[] parts = val.toString().split("\t");
-
             if (parts.length == 4) {
                 dimensions = parts[0] + "x" + parts[1]; // Combining width and height
                 totalClicks += Integer.parseInt(parts[2]);
@@ -25,7 +24,6 @@ public class CTRReducer extends Reducer<Text, Text, Text, Text>{
                 frequency++;
             }
         }
-
         double clickThroughRate = (double) totalClicks / frequency;
         double conversionRate = totalClicks > 0 ? (double) totalConversions / totalClicks : 0;
 
