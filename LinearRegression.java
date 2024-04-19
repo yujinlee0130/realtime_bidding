@@ -7,7 +7,7 @@ import org.apache.spark.ml.feature.VectorAssembler;
 import org.apache.spark.ml.regression.LinearRegression;
 import org.apache.spark.ml.regression.LinearRegressionModel;
 
-public class ClickPrediction {
+public class LinearRegression {
     public static void main(String[] args) {
         SparkSession spark = SparkSession
                 .builder()
@@ -49,7 +49,7 @@ public class ClickPrediction {
 
         // Assemble the features into a feature vector
         VectorAssembler assembler = new VectorAssembler()
-                .setInputCols(new String[]{"region", "city", "adExchange", "width", "height", "visibility", "format", "floorPrice", "biddingPrice", "payingPrice"})
+                .setInputCols(new String[]{"region", "city", "adExchange", "width", "height", "floorPrice", "biddingPrice", "payingPrice"})
                 .setOutputCol("features");
 
         Dataset<Row> output = assembler.transform(df);
